@@ -5,8 +5,3 @@
 " endfun
 
 command! -nargs=* TSWordWrap exe 'lua package.loaded.test = nil' | lua require'ts-word-wrapper'.test(<args>)
-
-augroup YourFirstPlugin
-    autocmd!
-    autocmd VimResized * :lua require("your-first-plugin").onResize()
-augroup END
